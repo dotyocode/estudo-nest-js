@@ -1,0 +1,64 @@
+@baseUrl = http://localhost:3000
+
+### RECADOS
+# @name RecadosController
+GET {{baseUrl}}/recados/?limit=10&offset=1
+
+### RECADOS POR ID
+# @name RecadosController
+GET {{baseUrl}}/recados/1
+
+### CRIAR RECARDO
+# @name RecadosController
+POST {{baseUrl}}/recados/
+Content-Type: application/json
+
+  {
+    "texto": "criei um novo recado",
+    "deId": 1,
+    "paraId": 1
+  }
+
+### EDITAR RECARDO COM PUT
+# @name RecadosController
+PATCH  {{baseUrl}}/recados/3
+Content-Type: application/json
+
+  {
+    "texto": "Editei 2",
+    "lido": false
+  }
+### DELETAR RECARDO
+# @name RecadosController
+DELETE   {{baseUrl}}/recados/2
+
+#######################################################
+### Pessoas
+# @name PessoasController
+GET {{baseUrl}}/pessoas/?limit=10&offset=1
+
+### Pessoas POR ID
+# @name PessoasController
+GET {{baseUrl}}/pessoas/1
+
+### CRIAR PESSOAS
+# @name PessoasController
+POST {{baseUrl}}/pessoas/
+Content-Type: application/json
+
+  {
+    "nome": "Jhonathan",
+    "email": "dotyomusic@gmail.com",
+    "password": "senha"
+  }
+
+### EDITAR PESSOA COM PATCH
+# @name PessoasController
+
+PATCH  {{baseUrl}}/pessoas/1
+Content-Type: application/json
+
+  {
+    "nome": "Dotyos",
+    "password": "senha123"
+  }
